@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var usernameView: EditText
     private lateinit var passwordView: EditText
     private lateinit var buttoniew: Button
-    private lateinit var dbClass: DatabaseHelper
+    private lateinit var dbClass: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         usernameView = findViewById(R.id.username)
         passwordView = findViewById(R.id.password)
 
-        dbClass = DatabaseHelper(this)
+        dbClass = UserDatabaseHelper(this)
 
         buttoniew.setOnClickListener {
 
